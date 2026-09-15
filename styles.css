@@ -1,0 +1,357 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --bg-elevated: rgba(15, 23, 42, 0.72);
+  --bg-soft: rgba(30, 41, 59, 0.62);
+  --text: #e5eefc;
+  --muted: #9fb3d9;
+  --border: rgba(148, 163, 184, 0.18);
+  --primary: #7c9cff;
+  --primary-strong: #98b0ff;
+  --accent: #4de2c5;
+  --shadow: 0 24px 60px rgba(2, 6, 23, 0.35);
+}
+
+/* Light theme values are toggled by a data attribute so there is no dependency on a framework. */
+body[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --bg-elevated: rgba(255, 255, 255, 0.88);
+  --bg-soft: rgba(255, 255, 255, 0.95);
+  --text: #15233d;
+  --muted: #56657f;
+  --border: rgba(86, 101, 127, 0.16);
+  --primary: #3458e6;
+  --primary-strong: #2446c8;
+  --accent: #0f9e83;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(124, 156, 255, 0.2), transparent 32%),
+    linear-gradient(180deg, #08111f 0%, var(--bg) 28%, #040914 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.site-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 3rem;
+}
+
+.hero {
+  padding: 1rem 0 2rem;
+}
+
+.topbar,
+.project-card,
+.stat-card,
+.note-card,
+.timeline,
+.footer {
+  backdrop-filter: blur(18px);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topbar-actions a {
+  color: var(--muted);
+}
+
+.theme-toggle {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(124, 156, 255, 0.18);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.hero-copy {
+  padding: 5rem 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 10ch;
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 10vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+}
+
+.hero-text,
+.section-heading p,
+.project-card p,
+.project-card li,
+.note-card p,
+.timeline-item p,
+.footer p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 60ch;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 2.5rem;
+}
+
+/* Buttons are links so the page stays deployable as a simple static site. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover,
+.theme-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #031020;
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.stats-grid,
+.card-grid,
+.notes-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card,
+.project-card,
+.note-card,
+.timeline {
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+}
+
+.stat-card {
+  padding: 1.3rem;
+}
+
+.stat-card strong {
+  display: block;
+  margin: 0.45rem 0;
+  font-size: 1.35rem;
+}
+
+.stat-label,
+.timeline-date {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.section {
+  padding: 2rem 0 0.5rem;
+}
+
+.section-heading {
+  max-width: 58ch;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card,
+.note-card {
+  padding: 1.5rem;
+}
+
+.featured {
+  background:
+    linear-gradient(180deg, rgba(124, 156, 255, 0.12), transparent),
+    var(--bg-elevated);
+}
+
+.pill {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 156, 255, 0.14);
+  color: var(--primary-strong);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-card ul {
+  padding-left: 1.1rem;
+  margin: 1rem 0 0;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.timeline {
+  padding: 1.6rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2rem 1fr;
+  gap: 1rem;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* The marker keeps the visual timeline readable without extra images or libraries. */
+.timeline-marker {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 0 6px rgba(124, 156, 255, 0.12);
+}
+
+.notes-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--bg-elevated);
+  text-align: center;
+}
+
+/* The smaller breakpoints keep the design comfortable on tablets and phones. */
+@media (max-width: 900px) {
+  .stats-grid,
+  .card-grid,
+  .notes-grid,
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 0.5rem;
+  }
+
+  .topbar,
+  .topbar-actions {
+    align-items: flex-start;
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    padding-top: 3rem;
+  }
+
+  h1 {
+    max-width: none;
+  }
+}
