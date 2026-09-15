@@ -24,13 +24,18 @@ if (savedTheme === "light" || savedTheme === "dark") {
 
 if (themeToggle) {
   const themeIcon = themeToggle.querySelector("span");
+  const themeText = themeToggle.querySelector(".sr-only");
 
   const syncThemeControls = () => {
     const isLight = document.body.dataset.theme === "light";
 
-    // Keep the icon and pressed state aligned with whether light mode is currently enabled.
+    // Keep the icon, text, and pressed state aligned with the theme control's current action.
     if (themeIcon) {
       themeIcon.textContent = isLight ? "🌙" : "☀️";
+    }
+
+    if (themeText) {
+      themeText.textContent = isLight ? "Switch to dark mode" : "Switch to light mode";
     }
 
     themeToggle.setAttribute("aria-pressed", String(isLight));
