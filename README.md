@@ -13,7 +13,7 @@ A lightweight GitHub Pages site for tracking personal projects, current work, an
 1. Push the site files to your repository.
 2. In GitHub, open **Settings > Pages**.
 3. Set the source to **Deploy from a branch**.
-4. Choose your main branch and the repository root (`/`).
+4. Choose your default branch and the repository root (`/`).
 5. Save, then wait for GitHub Pages to publish the site.
 
 After that, replace the placeholder text with your real project updates.
