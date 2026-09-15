@@ -293,6 +293,8 @@ h1 {
 
 .timeline {
   padding: 1.6rem;
+  margin: 0;
+  list-style: none;
 }
 
 .timeline-item {
