@@ -35,7 +35,6 @@ if (themeToggle) {
     }
 
     themeToggle.setAttribute("aria-label", nextThemeLabel);
-    themeToggle.setAttribute("aria-pressed", String(isLight));
   };
 
   syncThemeControls();
