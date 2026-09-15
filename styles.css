@@ -183,6 +183,13 @@ h1 {
   transform: translateY(-1px);
 }
 
+.button:focus-visible,
+.theme-toggle:focus-visible {
+  transform: translateY(-1px);
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
 .button-primary {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #031020;

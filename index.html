@@ -18,22 +18,28 @@
 </head>
 <body>
   <!-- The shell keeps the layout centered and gives GitHub Pages a complete landing page out of the box. -->
-  <div class="site-shell">
+  <div class="site-shell" id="page-top" tabindex="-1">
     <header class="hero">
       <nav class="topbar" aria-label="Primary">
-        <a class="brand" href="#top">my_Dev_Log</a>
+        <a class="brand" href="#page-top">my_Dev_Log</a>
         <div class="topbar-actions">
           <a href="#projects">Projects</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#notes">Notes</a>
           <!-- This button lets visitors switch themes without any build tooling. -->
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to light theme"
+            aria-pressed="false"
+          >
             <span aria-hidden="true">☀️</span>
           </button>
         </div>
       </nav>
 
-      <section class="hero-copy" id="top">
+      <section class="hero-copy">
         <p class="eyebrow">Personal project dashboard</p>
         <h1>Track what you are building, learning, and shipping.</h1>
         <p class="hero-text">
