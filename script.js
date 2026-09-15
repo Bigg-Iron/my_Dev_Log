@@ -1,5 +1,21 @@
 const themeToggle = document.querySelector("#theme-toggle");
-const savedTheme = localStorage.getItem("dev-log-theme");
+const readStoredTheme = () => {
+  try {
+    return localStorage.getItem("dev-log-theme");
+  } catch (error) {
+    return null;
+  }
+};
+
+const saveTheme = (theme) => {
+  try {
+    localStorage.setItem("dev-log-theme", theme);
+  } catch (error) {
+    // Ignore storage failures so the toggle still works even when persistence is blocked.
+  }
+};
+
+const savedTheme = readStoredTheme();
 
 // Restore the last theme choice so the site feels consistent across visits on GitHub Pages.
 if (savedTheme === "light" || savedTheme === "dark") {
@@ -28,7 +44,7 @@ if (themeToggle) {
     const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
 
     document.body.dataset.theme = nextTheme;
-    localStorage.setItem("dev-log-theme", nextTheme);
+    saveTheme(nextTheme);
     syncThemeControls();
   });
 }
