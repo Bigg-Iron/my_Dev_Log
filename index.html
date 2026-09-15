@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dev Log</title>
+  <meta
+    name="description"
+    content="A polished GitHub Pages site for tracking personal projects, current work, and milestones."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+  <noscript>
+    <style>
+      .js-only {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <!-- The shell keeps the layout centered and gives GitHub Pages a complete landing page out of the box. -->
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#projects">my_Dev_Log</a>
+        <div class="topbar-actions">
+          <a href="#projects">Projects</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#notes">Notes</a>
+          <!-- This button lets visitors switch themes without any build tooling. -->
+          <button
+            class="theme-toggle js-only"
+            role="switch"
+            id="theme-toggle"
+            type="button"
+            aria-checked="false"
+          >
+            <span aria-hidden="true">☀️</span>
+            <span class="sr-only">Switch to light mode</span>
+          </button>
+        </div>
+      </nav>
+
+      <section class="hero-copy">
+        <p class="eyebrow">Personal project dashboard</p>
+        <h1>Track what you are building, learning, and shipping.</h1>
+        <p class="hero-text">
+          Use this site as a living log for your work in progress. Every section below is filled with
+          placeholder content so you can quickly replace it with real updates later.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View active work</a>
+          <a class="button button-secondary" href="#notes">Update notes</a>
+        </div>
+
+        <!-- These stat cards highlight the kind of summary information you can keep updated over time. -->
+        <div class="stats-grid" aria-label="Current status">
+          <article class="stat-card">
+            <span class="stat-label">Active projects</span>
+            <strong>03</strong>
+            <p>Swap this count with the number of things you are actively advancing.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Latest milestone</span>
+            <strong>Prototype live</strong>
+            <p>Use this space for the latest notable progress update.</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Next review</span>
+            <strong>Friday</strong>
+            <p>Set a reminder for when you want to revisit priorities.</p>
+          </article>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Current focus</p>
+          <h2>Projects in motion</h2>
+          <p>
+            Each card is designed for short updates: what the project is, where it stands, and what happens next.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="project-card featured">
+            <span class="pill">Featured</span>
+            <h3>Project Alpha</h3>
+            <p>
+              Replace this with a quick summary of the main thing you are building right now and why it matters.
+            </p>
+            <ul>
+              <li>Status: Designing the first complete version</li>
+              <li>Next step: Add real project links and screenshots</li>
+              <li>Goal: Share a public progress update</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="pill">In Progress</span>
+            <h3>Project Beta</h3>
+            <p>Use this card for a secondary effort, experiment, or learning project.</p>
+            <ul>
+              <li>Status: Research and early planning</li>
+              <li>Next step: Define scope and key milestones</li>
+              <li>Goal: Publish a small first version</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <span class="pill">Backlog</span>
+            <h3>Project Gamma</h3>
+            <p>This is a good spot for ideas you want visible even if they are not active yet.</p>
+            <ul>
+              <li>Status: Waiting for dedicated time</li>
+              <li>Next step: Capture a clearer problem statement</li>
+              <li>Goal: Promote it into active work later</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-layout" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>What happens next</h2>
+          <p>Use the timeline to show how your current work is expected to unfold.</p>
+        </div>
+
+        <!-- The timeline uses simple semantic markup so it stays easy to maintain. -->
+        <ol class="timeline" aria-label="Upcoming milestones">
+          <li class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div>
+              <p class="timeline-date">This week</p>
+              <h3>Polish project summaries</h3>
+              <p>Swap placeholder copy with real project descriptions, links, and outcomes.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div>
+              <p class="timeline-date">Next up</p>
+              <h3>Document wins and blockers</h3>
+              <p>Keep a running note of lessons learned, risks, and open questions.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div>
+              <p class="timeline-date">Later</p>
+              <h3>Archive finished work</h3>
+              <p>Create a habit of moving completed projects into a “shipped” section.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section notes-panel" id="notes">
+        <div class="section-heading">
+          <p class="eyebrow">Working notes</p>
+          <h2>Quick prompts for future updates</h2>
+          <p>These prompts make it easier to keep the site fresh when you come back to edit it.</p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card">
+            <h3>What changed?</h3>
+            <p>Summarize the latest commit, release, or design decision in one or two sentences.</p>
+          </article>
+          <article class="note-card">
+            <h3>What is blocked?</h3>
+            <p>Capture unknowns, dependencies, or risks that are slowing progress.</p>
+          </article>
+          <article class="note-card">
+            <h3>What is next?</h3>
+            <p>List the next concrete action so you always know where to resume.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <span>Built for GitHub Pages</span>
+        <span class="footer-separator" aria-hidden="true">•</span>
+        <span>Update the placeholders and publish when ready.</span>
+      </p>
+    </footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
