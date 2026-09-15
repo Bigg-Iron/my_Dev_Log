@@ -29,7 +29,7 @@ if (themeToggle) {
   const syncThemeControls = () => {
     const isLight = document.body.dataset.theme === "light";
 
-    // Keep the icon, text, and pressed state aligned with the theme control's current action.
+    // Keep the icon, text, and switch state aligned with the theme control's current action.
     if (themeIcon) {
       themeIcon.textContent = isLight ? "🌙" : "☀️";
     }
@@ -38,7 +38,7 @@ if (themeToggle) {
       themeText.textContent = isLight ? "Switch to dark mode" : "Switch to light mode";
     }
 
-    themeToggle.setAttribute("aria-pressed", String(isLight));
+    themeToggle.setAttribute("aria-checked", String(isLight));
   };
 
   syncThemeControls();

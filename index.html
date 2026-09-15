@@ -15,6 +15,13 @@
     rel="stylesheet"
   >
   <link rel="stylesheet" href="./styles.css">
+  <noscript>
+    <style>
+      .js-only {
+        display: none;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
   <!-- The shell keeps the layout centered and gives GitHub Pages a complete landing page out of the box. -->
@@ -28,10 +35,11 @@
           <a href="#notes">Notes</a>
           <!-- This button lets visitors switch themes without any build tooling. -->
           <button
-            class="theme-toggle"
+            class="theme-toggle js-only"
+            role="switch"
             id="theme-toggle"
             type="button"
-            aria-pressed="false"
+            aria-checked="false"
           >
             <span aria-hidden="true">☀️</span>
             <span class="sr-only">Switch to light mode</span>
