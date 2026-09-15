@@ -345,6 +345,11 @@ h1 {
   margin-bottom: 0;
 }
 
+.footer-separator {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* The smaller breakpoints keep the design comfortable on tablets and phones. */
 @media (max-width: 900px) {
   .stats-grid,
