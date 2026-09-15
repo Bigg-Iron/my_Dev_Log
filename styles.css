@@ -333,6 +333,15 @@ h1 {
   text-align: center;
 }
 
+.footer p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
 /* The smaller breakpoints keep the design comfortable on tablets and phones. */
 @media (max-width: 900px) {
   .stats-grid,
