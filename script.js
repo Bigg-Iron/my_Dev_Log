@@ -6,19 +6,29 @@ if (savedTheme === "light" || savedTheme === "dark") {
   document.body.dataset.theme = savedTheme;
 }
 
-const syncThemeIcon = () => {
-  const isLight = document.body.dataset.theme === "light";
+if (themeToggle) {
+  const themeIcon = themeToggle.querySelector("span");
 
-  // The icon gives a quick visual cue about the currently active color mode.
-  themeToggle.querySelector("span").textContent = isLight ? "🌙" : "☀️";
-};
+  const syncThemeControls = () => {
+    const isLight = document.body.dataset.theme === "light";
+    const nextThemeLabel = isLight ? "Switch to dark theme" : "Switch to light theme";
 
-syncThemeIcon();
+    // Keep the icon and assistive text aligned with the current state of the toggle.
+    if (themeIcon) {
+      themeIcon.textContent = isLight ? "🌙" : "☀️";
+    }
 
-themeToggle.addEventListener("click", () => {
-  const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+    themeToggle.setAttribute("aria-label", nextThemeLabel);
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+  };
 
-  document.body.dataset.theme = nextTheme;
-  localStorage.setItem("dev-log-theme", nextTheme);
-  syncThemeIcon();
-});
+  syncThemeControls();
+
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+
+    document.body.dataset.theme = nextTheme;
+    localStorage.setItem("dev-log-theme", nextTheme);
+    syncThemeControls();
+  });
+}
